@@ -17,3 +17,49 @@ Dabei hängt die transferierte Wärmemenge $\symup{d}Q$ von der Geometrie des St
 \end{equation}
 
 berechnen. Hier ist $A$ die Querschnittsfläche des Stabes und $\kappa$ die spezifische Wärmeleitfähigkeit. Das negative Vorzeichen ist eine Konvention bedingt durch den oben beschrieben Fakt, dass die Wärme immer zur kälteren Stelle fließt.
+Mithilfe der Kontinuitätsgleichung 
+\begin{equation}
+\label{eqn:kontinuitaet}
+    \frac{\partial}{\partial t}\frac{\partial Q}{\partial V} + \symup{div} \boldsymbol{j} = 0
+\end{equation}
+und folgenden Beziehungen für $\partial Q$ und $\boldsymbol{j}$
+
+\centerline{$\boldsymbol{j} = - \kappa \frac{\partial T}{\partial x}$}
+
+\centerline{$\partial Q = mc \cdot \partial T$}
+
+lässt sich die eindimensionale Diffusionsgleichung herleiten:
+\begin{equation}
+\label{eqn:diffusion}
+    \frac{\partial T}{\partial t} = \frac{\kappa}{\rho c} \cdot \frac{\partial^2 T}{\partial x^2}    .
+\end{equation}
+
+$c$ ist hier die spezifische Wärmekapazität des Stoffes, $\rho$ dessen Dichte und $m$ die Masse des Körpers.
+
+Wird der Körper periodisch aufgeheizt und abgekühlt, so lässt sich in diesem eine Temperaturwelle feststellen.
+Diese wird mittels
+\begin{equation}
+\label{eqn:term-welle}
+    T(x, t) = T_0 \cdot \exp \bigg( -\sqrt{\frac{\omega \rho c}{2 \kappa}} x \bigg) \cdot \cos\bigg( \omega t - \sqrt{\frac{\omega \rho c}{2 \kappa} x} \bigg)
+\end{equation}
+beschrieben. Dabei ist $T_0$ die Amplitude der Welle. Der Dämpfungsgrad wird durch die Exponentialfunktion beschrieben.
+Werden Amplitude an zwei verschiedenen Stellen gemessen, lässt sich aus deren Verhältnis und der Frequenz der Welle die Dämpfung berechnen.
+Dazu wird folgende Formel für die Phasengeschwindigkeit der Welle benötigt:
+\begin{equation}
+\label{eqn:phasengeschwindigkeit}
+    v = \sqrt{\frac{2 \omega \kappa}{\rho c}}  .
+\end{equation}
+Werden nun die Verhältnisse 
+
+\centerline{$\omega = \frac{2 \pi}{t_\text{periode}}$}
+
+und
+
+\centerline{$\phi = {2 \pi \Delta t}{t_\text{periode}}$}
+
+genutzt, wobei $t_\text{periode}$ die Periodendauer und $\phi$ die Phasenverschiebung ist, lässt sich die Formel
+\begin{equation}
+\label{eqn:leitfaehigkeit}
+    \kappa = \frac{\rho c (\Delta x)^2}{2 \Delta t \ln (\frac{A_\text{nah}}{A_\text{fern}})}
+\end{equation}
+berechnen. $A_\text{nah}$ und $A_\text{fern}$ sind hier die beiden gemessenen Amplituden.
