@@ -1,2 +1,89 @@
 \section{Auswertung}
 \label{sec:Auswertung}
+\subsection{Statische Methode}
+Die Graphen, welche die Tempereaturverläufe der vier Stäbe an den Thermoelemten, welche weiter vom Peltierelement entfernt sind, darstellen finden
+sich im Anhang als Graphik 1 und 2. Anzumerken sei, dass die für diese Messreihe relevanten Daten, erst ab der Markierung zu betrachten sind. Die vorherigen
+Daten stellen Messschwierigkeiten dar, welche für die Ergebnisse allerdings keine Auswirkungen haben. Alle Graphen zeigen einen zuerst exponentiellen 
+Anstieg, der aber mit zunehmender Zeit deutlich abflacht. Auffällig ist die Messung des Thermoelements $T_8$, also dem des Edelstahls. Die Temperatur 
+steigt hier im Vergleich zu den anderen Verläufen deutlich langsamer und erreicht in der Messperiode auch deutlich geringere Temperaturen (ca. 37°C), als die 
+anderen Thermoelemente (ca. 46-52°C). Die nach 700s gemessenen Temperaturen der äußeren Thermoelemente
+\\ \\
+\centerline{$T_1 = 321.80 \symup{K}$}
+\centerline{$T_4 =  319.06 \symup{K}$}
+\centerline{$T_5 =  324.31 \symup{K}$}
+\centerline{$T_8 =  310.10 \symup{K}$}
+\\ \\
+dienen dem qualitativen Vergleich der Wärmeleitfähigkeit der unterschiedlichen Materialien.
+Wie zu sehen weist das Thermoelement $T_5$ die höchste Temperatur auf. Da die Messung mit ungefähr gleichen Temperaturen an allen Stäben gestartet wurde,
+lässt sich schließen, dass Aluminium von allen drei Materialien die höchste Wärmeleitfähigkeit hat. 
+Zur Bestimmung des Wärmestroms werden die gemessenen Temperaturen, welche in \autoref{tab:temps} dargestellt sind, verwendet. 
+Die Berechnung erfolgt dann über Gleichung \eqref{eqt:waermestrom}, wobei $\partial T$ die Änderung der Temperatur am jeweiligen Stab, das heißt 
+die Temperaturdifferenz der beiden Thermoelemente am Stab, darstellt, $\kappa$ die Wärmeleitfähigkeit des Material, $A$ die Querschnittsfläche des Stabes und $\Delta x$ der Abstand zwischen den Thermoelementen ist.
+Die Werte für $A$ sind der Versuchsanleitung \cite[2]{V204} und die Werte für $\kappa$ der Literatur \cite{unknown} entnommen. Der Abstand $\Delta x$ ist gemessen worden und beträgt bei allen vier Stäben
+$\Delta x = 0.032$m. 
+Die verwendenten Werte für $A$ und $\kappa$ sind in \autoref{tab:werte} zu sehen.
+Damit ergeben sich nach Gleichung \eqref{eqt:waermestrom} für den Wärmestrom die Werte welche in \autoref{tab:wstrom} zu sehen sind.
+\input{../content/kappa_a.tex}
+\input{../content/temps.tex}
+\input{../content/waermestroeme.tex}
+Im Folgenden werden die Temperaturdifferenzen des breiten Messingstabes, also $T_2-T_1$, und die des Edelstahlstabes, also $T_7 - T_8$ betrachtet. Die 
+zugehörigen Graphen finden sich jeweils in Grafik 3 und 4 im Anhang, wobei auch bei diesen Graphiken erst die Daten ab der Markierung zu berücksichtigen sind.
+Wie zu sehen ist steigen die Kurven zunächst stark an, durchlaufen ein Maximum und flachen danach ab und scheinen dann gegen einen Wert zu konvergieren.
+Zu Bemerken ist hier allerdings, dass sich die beiden Grafiken gar nicht unterscheiden, womit unter Berücksichtigung der Werte aus \autoref{tab:wstrom}, bei denen 
+ein großer Unterschied zwischen den Differenzen festzustellen ist, festzustellen ist, dass beim Erstellen der Grafiken ein grober Fehler unterlaufen ist.
+Näheres wird hierzu in der Diskussion weiter erklärt.
+
+\subsection{Dynamische Methode}
+Mittels der sogenannten Angströng-Methode wird im folgenden die Wärmeleitfähigkeit $\kappa$ für die drei Materialien bestimmt.
+Hierzu wurden zunächst die die Temperaturwellen der beiden Thermoelemente des jeweiligen Stabes gegeneinander aufgetragen und die Amplituden $A_1,A_2$ und die Phasendifferenz $\Delta t$ durch diese Graphen bestimmt.
+Die Temperaturwellen für Messing ist in Grafik 5, die für Aluminium in Grafik 6 und die für Edelstahl in Grafik 7 im Anhang zu sehen. Der hellere Graph stellt in Grafik 5 und 6
+die Messung des weiter entfernten Thermoelements dar, der dunklere Graph den des Näheren. Die Belegung ist in Grafik 7 umgekehrt.
+Aus den abgelesenen Amplitudenverhältnissen und Phasendifferenzen wird mittels Gleichung \eqref{eqt:mittelwert} der Mittelwert bestimmt, dessen Fehler sich mit Gleichung \eqref{eqt:FehlerMittelwert} errechnet.
+Im Falle des Messingstabes sind die hierzu verwendeten Werte in \autoref{tab:mwmessing} zu sehen welche der Grafik 5 entnommen sind.
+Die für die Berechnung notwendigen Materialkonstanten sind in \autoref{tab:materialkonst} dargestellt.
+Somit ergeben sich für die Mittelwerte:
+\\ \\
+\centerline{$\frac{A_\text{nah}}{A_\text{fern}} = 2.46 \pm 0.13$}
+\centerline{$\Delta t = (15.4 \pm 0.7) \symup{s}$}.
+\\ \\
+Nach Gleichung \eqref{eqn:leitfaehigkeit} erechnet sich die Wärmeleitfähigkeit $\kappa$, der zugehörige Fehler mittels Gleichung \eqref{fehlerfortpflanzung}
+und ist somit 
+\begin{equation}
+\label{eqt:fehlerkappa}
+\Delta \kappa = \sqrt{\biggl (\frac{\rho c (\Delta x)^2}{-2 \ln{\frac{A_\text{nah}}{A_\text{fern}}} (\Delta t)^2 }\biggr)^2(dt)^2 + \biggl(\frac{\rho c (\Delta x)^2}{-2 \frac{A_\text{nah}}{A_\text{fern}} \ln{\frac{A_\text{nah}}{A_\text{fern}}}^2 (\Delta t)} \biggr )^2 (d\frac{A_\text{nah}}{A_\text{fern}})^2 }.
+\end{equation}
+Für Messing ergibt sich damit eine Wärmeleitfähigkeit von
+\\ \\
+\centerline{$\kappa_\text{Messing} = (121 \pm 9) \symup{\frac{W}{mK}}$}.
+\\ \\
+Dieselbe Rechnung erfolgt analog für Aluminium.
+Unter Berücksichtigung der, der Grafik 6 entnommenen Werte, welche in \autoref{tab:alumw} aufgelistet sind, und den Materialkonstanten von Aluminium (siehe \autoref{tab:materialkonst})
+ergeben sich für Aluminium die Mittelwerte
+\\ \\
+\centerline{$\frac{A_\text{nah}}{A_\text{fern}} = 1.81 \pm 0.06$}
+und
+\centerline{$\Delta t = (10.7 \pm 0.7) \symup{s}$}
+\\ \\
+und daher mittels Gleichung \eqref{eqn:leitfähigkeit} und \eqref{eqt:fehlerkappa} die Wärmeleitfähigkeit von Aluminium
+\\ \\ 
+\centerline{$\kappa_\text{Aluminium} = (187 \pm 17) \symup{\frac{W}{mK}}$}.
+\\ \\
+Für die Bestimmung der Wärmeleitfähigkeit von Aluminium und Messing ist mit einer Temperaturwelle von 80s Periodendauer zu arbeiten,
+während für die folgende Bestimmung der Wärmeleitfähigkeit von Edelstahl eine Periodendauer von 200s notwendig ist; die Berechnung erfolgt
+dennoch komplett analog zu Aluminium und Messing.
+Mithilfe der Gleichungen \eqref{eqt:mittelwert} und \eqref{eqt:FehlerMittelwert} erechnet sich mit den Werten in \autoref{tab:edelmw} und den Materialkonstanten die Mittelwerte
+\\ \\
+\centerline{$\frac{A_\text{nah}}{A_\text{fern}} = 4.00 \pm 0.15$}
+und
+\centerline{$\Delta t = (66.7 \pm 4.3) \symup{s}$}.
+\\ \\
+Somit ist die Wärmeleitfähigkeit von Edelstahl nach Gleichung \eqref{eqn:leitfaehigkeit} und \eqref{eqt:fehlerkappa}
+\\ \\ 
+\centerline{$\kappa_\text{Edelstahl} = (17.7 \pm 1.2) \symup{\frac{W}{mK}}$}.
+\\ \\
+
+\input{../content/materialkonst.tex}
+\input{../content/messingmw.tex}
+\input{../content/alumw.tex}
+\input{../content/edelmw.tex}
+
