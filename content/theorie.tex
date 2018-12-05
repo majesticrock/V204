@@ -6,8 +6,10 @@ Die jeweiligen für das Material spezifischen Wärmeleitfähigkeiten werden eben
 \section{Theorie}
 \label{sec:Theorie}
 
-Herrscht in einem Material eine Temperaturdiffrenz an verschiedenen Stellen, so gibt es einen Wärmeausgleich.
+Herrscht in einem Material eine Temperaturdifferenz an verschiedenen Stellen, so gibt es einen Wärmeausgleich.
 Dieser kann mittels Konvektion, Wärmstrahlung und Wärmeleitung stattfinden. In diesem Versuch liegt das Augenmerk auf der Wärmeleitung.
+In Festkörpern erfolgt diese mittels sogenannter Phononen, das sind Schwingungen, die als Teilchen beschrieben werden können, und freien Elektronen.
+In Metallen kann der Beitrag durch diese Phononen vernachlässigt werden.
 Generell wird immer beobachtet, dass die Wärme von der wärmeren Stelle zu der kälteren fließt.
 Dabei hängt die transferierte Wärmemenge $\symup{d}Q$ von der Geometrie des Stabes sowie den Materialeigenschaften ab. Die besagte Wärmemenge lässt sich mittels
 
@@ -41,7 +43,7 @@ lässt sich die eindimensionale Diffusionsgleichung herleiten:
     \frac{\partial T}{\partial t} = \frac{\kappa}{\rho c} \cdot \frac{\partial^2 T}{\partial x^2}    .
 \end{equation}
 
-$c$ ist hier die spezifische Wärmekapazität des Stoffes, $\rho$ dessen Dichte und $m$ die Masse des Körpers.
+Dabei ist $c$ die spezifische Wärmekapazität des Stoffes, $\rho$ dessen Dichte und $m$ die Masse des Körpers.
 
 Wird der Körper periodisch aufgeheizt und abgekühlt, so lässt sich in diesem eine Temperaturwelle feststellen.
 Diese wird mittels
@@ -69,4 +71,4 @@ genutzt, wobei $t_\text{Periode}$ die Periodendauer und $\phi$ die Phasenverschi
 \label{eqn:leitfaehigkeit}
     \kappa = \frac{\rho c (\Delta x)^2}{2 \Delta t \ln \Big(\frac{A_\text{nah}}{A_\text{fern}}\Big)}
 \end{equation}
-berechnen. $A_\text{nah}$ und $A_\text{fern}$ sind hier die beiden gemessenen Amplituden.
+berechnen. Dabei sind $A_\text{nah}$ und $A_\text{fern}$ die beiden gemessenen Amplituden.
